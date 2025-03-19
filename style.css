@@ -56,10 +56,8 @@
   --button-weight: 500;
 }
 
-::-webkit-scrollbar{
-
+::-webkit-scrollbar {
   width: 0;
-
 }
 
 body {
@@ -105,6 +103,7 @@ button:hover {
 
 .main_nav {
   display: flex;
+  flex-wrap: wrap;
   /* border: 1px solid yellow; */
   align-items: center;
   padding: 3vh 8vw;
@@ -182,11 +181,11 @@ button:hover {
   padding: 4vh 2vw;
   box-shadow: var(--card-shadow);
   transition: 0.3s ease-in-out;
- word-wrap: break-word;
- justify-content: center;
- overflow: hidden;
- min-width: 250px;
- max-width: 350px;
+  word-wrap: break-word;
+  justify-content: center;
+  overflow: hidden;
+  min-width: 250px;
+  max-width: 350px;
 }
 
 .card_main:hover {
@@ -205,9 +204,8 @@ button:hover {
   box-shadow: var(--thumbnail-shadow-hover);
 }
 
-.card_main h2{
-
-  white-space: normal; 
+.card_main h2 {
+  white-space: normal;
   word-wrap: break-word;
   display: flex;
   align-items: center;
@@ -215,7 +213,6 @@ button:hover {
   max-width: 100%;
   padding: 0 10px;
   gap: 8px;
-
 }
 
 .card_main:hover h2 {
@@ -224,27 +221,25 @@ button:hover {
 
 .card_main h3 {
   color: var(--channel-name);
-  white-space: normal; 
+  white-space: normal;
   word-wrap: break-word;
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 100%;
   padding: 0 10px;
-  gap: 8px
+  gap: 8px;
 }
 
 .card_main:hover h3 {
   color: var(--channel-name-hover);
 }
 
-.page_number_main_container{
-
+.page_number_main_container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1vw;
   margin-top: 4vh;
   margin-bottom: 4vh;
-
 }
