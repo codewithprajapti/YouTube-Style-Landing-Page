@@ -84,11 +84,11 @@ pageNumber.forEach((pageNumber) => {
   pageNumber.addEventListener("click", () => {
     console.log(pageNumber.innerText);
 
-    cardsContainer.innerHTML = "";
     display(pageNumber.innerText);
   });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  cardsContainer.innerHTML= "";
   display(1);
 });
