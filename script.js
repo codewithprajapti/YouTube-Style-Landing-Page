@@ -15,22 +15,17 @@ async function display(pageNumber) {
     const response = await api.json();
 
     const data = response.data.data;
-    // console.log(data)
 
     data.forEach((element) => {
       // Declairing all variables for data fatch
 
       const thumbnailsUrl = element.items.snippet.thumbnails.medium.url;
-      // console.log(thumbnailsUrl)
 
       const title = element.items.snippet.title;
-      //   console.log(title)
 
       const channelName = element.items.snippet.channelTitle;
-      //   console.log(channelName)
 
       const videoId = element.items.id;
-      //   console.log(videoId)
 
       const videoLink = basUrl.concat(videoId);
       // console.log(videoLink)
@@ -50,9 +45,9 @@ async function display(pageNumber) {
 
       const thumbnail = document.createElement("img");
 
-      const titleElement = document.createElement("h2");
+      const titleElement = document.createElement("h3");
 
-      const channelNameElement = document.createElement("h3");
+      const channelNameElement = document.createElement("h4");
 
       //   Add values in all Elements
 
@@ -61,9 +56,9 @@ async function display(pageNumber) {
 
       thumbnail.setAttribute("src", thumbnailsUrl);
 
-      titleElement.innerHTML = `<i class="fas fa-video"></i> &nbsp; ${title}`;
+      titleElement.innerHTML = `<i class="fas fa-video"></i>  ${title}`;
 
-      channelNameElement.innerHTML = `<i class="fas fa-user-circle"></i> &nbsp; ${channelName}`;
+      channelNameElement.innerHTML = `<i class="fas fa-user-circle"></i>  ${channelName}`;
 
       //   Append child in Crad Element
 
@@ -85,12 +80,11 @@ async function display(pageNumber) {
   }
 }
 
-// display();
-
 pageNumber.forEach((pageNumber) => {
   pageNumber.addEventListener("click", () => {
     console.log(pageNumber.innerText);
 
+    cardsContainer.innerHTML = "";
     display(pageNumber.innerText);
   });
 });

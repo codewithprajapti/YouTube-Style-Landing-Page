@@ -68,7 +68,9 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
   font-family: var(--headings-font);
   font-weight: var(--headings-weight);
 }
@@ -204,7 +206,8 @@ button:hover {
   box-shadow: var(--thumbnail-shadow-hover);
 }
 
-.card_main h2 {
+.card_main h3 {
+  align-self: flex-start;
   white-space: normal;
   word-wrap: break-word;
   display: flex;
@@ -212,14 +215,16 @@ button:hover {
   justify-content: center;
   max-width: 100%;
   padding: 0 10px;
-  gap: 8px;
+  gap: 18px;
+  text-align: start;
 }
 
-.card_main:hover h2 {
+.card_main:hover h3 {
   color: var(--text-hover);
 }
 
-.card_main h3 {
+.card_main h4 {
+  align-self: flex-start;
   color: var(--channel-name);
   white-space: normal;
   word-wrap: break-word;
@@ -228,10 +233,11 @@ button:hover {
   justify-content: center;
   max-width: 100%;
   padding: 0 10px;
-  gap: 8px;
+  gap: 22px;
+  text-align: center;
 }
 
-.card_main:hover h3 {
+.card_main:hover h4 {
   color: var(--channel-name-hover);
 }
 
