@@ -28,7 +28,6 @@ async function display(pageNumber) {
       const videoId = element.items.id;
 
       const videoLink = basUrl.concat(videoId);
-      // console.log(videoLink)
 
       //   Creating Card
 
@@ -89,6 +88,6 @@ pageNumber.forEach((pageNumber) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  cardsContainer.innerHTML= "";
+  cardsContainer.innerHTML = "";
   display(1);
 });
